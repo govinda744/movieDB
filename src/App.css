@@ -1,33 +1,101 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Eater');
+*{
+  font-family:'Eater';
+  margin:0px;
+  padding:0px;
+}
+.navbar{
+  width:100%;
+  /* background-color:  #1392a5 ; */
+  background-color: #284c52;
+  height:50px;
+  color:white;
+  display:flex;
+  position:fixed;
+  z-index:999;
+}
+.navbar>img{
+  height:50px;
+  flex:1;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.navbar>.right{
+ flex:18;
+ display:flex; 
+ flex-direction:row;
+ justify-content:flex-end;
+ padding:10px;
+}
+.navbar>.right>.links{
+  display:flex;
+  flex-direction:row;
+  padding:0px 10px;
+  justify-content:space-around;
+  align-items:center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.links,input[type = "text"]{
+  margin-right: 20px;
+}
+
+input[type = "text"]{
+  border-radius:5px;
+  padding-left: 10px;
+}
+
+.links span{
+  margin-left:10px;
+}
+
+.body{
+  position:absolute;
+  width:100%;
+  margin-top: 50px;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  color:white;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align:center;
 }
 
-.App-link {
-  color: #61dafb;
+
+.page-bg {
+  background-image: url('./skull.jpg');
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(3px);
+    background-size:cover;
+  background-position:center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movies{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-around;
 }
+
+.movies>.moviepalatte{
+  width:15%;
+  margin: 30px;
+  align-self: flex-start;
+  border: 5px solid white;
+  border-radius:5px;
+  background:rgba(0,0,0,0.8);
+}
+
+.movies>.moviepalatte img{
+  width:100%;
+  height:200px;
+  
+}
+
